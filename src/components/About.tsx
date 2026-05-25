@@ -143,7 +143,7 @@ export default function About() {
               }}
             >
               <img
-                src="/media/pratika_instagram.jpg"
+                src={`${import.meta.env.BASE_URL}media/pratika_instagram.jpg`}
                 alt={artist.name}
                 style={{ width: "100%", height: "auto", display: "block" }}
               />

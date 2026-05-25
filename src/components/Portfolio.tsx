@@ -88,7 +88,7 @@ export default function Portfolio() {
                 >
                   {perf.videoId ? (
                     <img
-                      src={`/media/thumb_${perf.videoId}.jpg`}
+                      src={`${import.meta.env.BASE_URL}media/thumb_${perf.videoId}.jpg`}
                       alt={perf.title}
                       loading="lazy"
                       style={{

@@ -50,7 +50,7 @@ function ReleaseCard({ release, i }: ReleaseCardProps) {
       >
         {release.videoId ? (
           <motion.img
-            src={`/media/thumb_${release.videoId}.jpg`}
+            src={`${import.meta.env.BASE_URL}media/thumb_${release.videoId}.jpg`}
             alt={release.title}
             loading="lazy"
             style={{

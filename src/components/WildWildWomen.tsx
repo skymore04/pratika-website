@@ -115,7 +115,7 @@ export default function WildWildWomen() {
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `url(${wildWildWomen.heroImage.src})`,
+            backgroundImage: `url(${import.meta.env.BASE_URL}${wildWildWomen.heroImage.src.replace(/^\//, '')})`,
             backgroundSize: "cover",
             backgroundPosition: "center center",
             scale: useTransform(scrollYProgress, [0, 0.15], [1, 1.06]),

@@ -337,7 +337,7 @@ function CouncilCard({
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `url(${member.image})`,
+            backgroundImage: `url(${import.meta.env.BASE_URL}${member.image.replace(/^\//, '')})`,
             backgroundSize: "cover",
             backgroundPosition: "center 30%",
             x: imgX,

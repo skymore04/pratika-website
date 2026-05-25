@@ -522,7 +522,7 @@ function VideoCard({
       }}
     >
       <img
-        src={`/media/thumb_${video.videoId}.jpg`}
+        src={`${import.meta.env.BASE_URL}media/thumb_${video.videoId}.jpg`}
         alt={video.title}
         loading="lazy"
         style={{

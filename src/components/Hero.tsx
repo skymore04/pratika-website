@@ -56,8 +56,8 @@ export default function Hero({ introComplete = true }: { introComplete?: boolean
           playsInline
           style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.65 }}
         >
-          <source src="/media/hero_wild_soul.mp4" type="video/mp4" />
-          <source src="/media/hero_wild_soul.webm" type="video/webm" />
+          <source src={`${import.meta.env.BASE_URL}media/hero_wild_soul.mp4`} type="video/mp4" />
+          <source src={`${import.meta.env.BASE_URL}media/hero_wild_soul.webm`} type="video/webm" />
         </video>
       </motion.div>
 

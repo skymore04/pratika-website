@@ -159,7 +159,7 @@ export default function ImageStack({ images }: ImgStackProps) {
                 }}
               >
                 <img
-                  src={card.src}
+                  src={`${import.meta.env.BASE_URL}${card.src.replace(/^\//, '')}`}
                   alt={imageData?.alt || `Photo ${card.id + 1}`}
                   style={{
                     width: "100%",
