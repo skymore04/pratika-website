@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=Syne:wght@400;700;800&family=Cinzel:wght@400;700;900&family=Rubik+Glitch&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --bg: #050508;
+  --bg-alt: #0a0a12;
+  --bg-warm: #0c0812;
+  
+  /* Brand system — primary & secondary */
+  --brand: #ff2d78;
+  --brand-alt: #a78bfa;
+  
+  /* Accent palette — 4 intentional tones */
+  --accent-pink: #ff2d78;
+  --accent-purple: #a78bfa;
+  --accent-cyan: #22d3ee;
+  --accent-gold: #d97706;
+  
+  /* Legacy aliases (backward-compatible) */
+  --hot-pink: var(--accent-pink);
+  --cold-purple: var(--accent-purple);
+  --cold-cyan: var(--accent-cyan);
+  --hot-gold: var(--accent-gold);
+  
+  /* Ambient glows for interactive elements */
+  --glow-pink: 0 0 40px rgba(255,45,120,0.08);
+  --glow-purple: 0 0 40px rgba(167,139,250,0.08);
+  --glow-cyan: 0 0 40px rgba(34,211,238,0.08);
+  --glow-gold: 0 0 40px rgba(217,119,6,0.08);
+  
+  /* Burgundy — drawn from her Linktree identity */
+  --deep-rose: #881f32;
+  
+  --text-bright: #ffffff;
+  --text: #f0ecee;
+  --text-dim: #8b83a0;
+  --text-muted: #3d3750;
+
+  --font-display: 'Syne', sans-serif;
+  --font-display-hero: 'Syne', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none !important;
+}
+
+::selection { background: var(--hot-pink); color: #fff; }
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { background: none; border: none; color: inherit; }
+
+/* ── Typography — brutal, deliberate, unapologetic ── */
+.display-mega {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 28vw, 22rem);
+  line-height: 0.78;
+  text-transform: uppercase;
+  letter-spacing: -6px;
+  user-select: none;
+}
+
+.display-large {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7.5vw, 6.5rem);
+  line-height: 0.82;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  user-select: none;
+}
+
+.display-medium {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 8vw, 6rem);
+  line-height: 0.85;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.display-small {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.body-hero {
+  font-size: clamp(0.85rem, 1.1vw, 1rem);
+  line-height: 1.7;
+  color: var(--text-dim);
+  font-weight: 300;
+}
+
+.body-large {
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  line-height: 1.8;
+  color: var(--text-dim);
+  font-weight: 300;
+}
+
+.body-small {
+  font-size: 0.72rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.label {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.label-sm {
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* ── Gradients ── */
+.grad-hot {
+  background: linear-gradient(135deg, var(--accent-pink), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-cold {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-cyan {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grad-gold {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Text utilities ── */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255,255,255,0.07);
+}
+
+.text-outline-thick {
+  color: transparent;
+  -webkit-text-stroke: 2.5px rgba(255,255,255,0.05);
+}
+
+.text-outline-light {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,0.03);
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+/* ── Noise overlay ── */
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1a1625; border-radius: 2px; }
+
+/* ── Section blocks — no container, no padding, full personality ── */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-tight {
+  padding: 100px 32px;
+}
+
+@media (max-width: 768px) {
+  .section-tight { padding: 60px 16px; }
+  body { cursor: auto; }
+  body * { cursor: auto !important; }
+}
+
+@media (max-width: 480px) {
+  .section-tight { padding: 48px 12px; }
+  .display-mega {
+    font-size: clamp(3.2rem, 20vw, 5rem);
+    letter-spacing: -3px;
+  }
+  .display-large {
+    font-size: clamp(2.2rem, 14vw, 3rem);
+    letter-spacing: -2px;
+  }
+  .body-large {
+    font-size: 0.82rem;
+  }
+  .text-outline-thick {
+    -webkit-text-stroke: 1.5px rgba(255,255,255,0.05);
+  }
+}
+
+@media (max-width: 380px) {
+  .display-mega {
+    font-size: clamp(2.5rem, 18vw, 3.2rem);
+    letter-spacing: -2px;
+  }
+  .display-large {
+    font-size: clamp(1.8rem, 12vw, 2.2rem);
+    letter-spacing: -1px;
+  }
+}
